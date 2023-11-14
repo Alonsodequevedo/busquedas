@@ -10,22 +10,20 @@ int main(void)
 {
     srand(time(NULL));
     
-    int num = 1000;
+    int num = 100000;
     int lista[num];
     int i;
     
    
     for (i = 0; i < num; i++)
     {
-        lista[i] = rand() % 10 + 1;
+        lista[i] = rand() % 100 + 1;
     }
     
     
    
     OrdenarLista(lista, num);
     
-    printf("Elementos de la lista (ordenados): \n");
-    MostrarLista(lista, num);
     
     int elemento;
     printf("Elemento a buscar: ");
@@ -103,6 +101,10 @@ void OrdenarLista(int lista[], int num)
                 lista[j] = lista[j + 1];
                 lista[j + 1] = temp;
             }
+        }
+    }
+}
+
         }
     }
 }
